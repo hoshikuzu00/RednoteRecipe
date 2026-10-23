@@ -81,7 +81,9 @@ API requests, including the connection check, may incur usage charges. Enter the
 
 #### Model selection and request limits
 
-**All AI calls currently use `gpt-5.4-nano`.** The model is hard-coded, and Settings lets you enter an API key but does not offer a model picker. The app does not automatically switch to another model after a failure.
+**The checked-in version uses `gpt-5.4-nano` for all AI calls.** The model is hard-coded, and Settings lets you enter an API key but does not offer a model picker. The app does not automatically switch to another model after a failure.
+
+**Testing experience:** GPT-5.5 has also been tested with this project and produced recipe extractions with good accuracy in those tests. This is a qualitative assessment of the test results.
 
 | Request | Model | `max_output_tokens` |
 | --- | --- | --- |
