@@ -110,7 +110,7 @@ python3 Tests/run_prompt_bundle_regressions.py
 
 ## 第三方代码
 
-可选后端使用 [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills) 提供的 Chrome 扩展、浏览器桥接服务和命令行工具。该项目以固定版本的 Git 子模块引入，遵循其自身的 [MIT 许可证](LocalBackend/xiaohongshu-skills/LICENSE)。本仓库的 iOS 应用和 Python 适配服务负责与它对接。
+可选后端使用 [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills) 提供的 Chrome 扩展、浏览器桥接服务和命令行工具。该项目以固定版本的 Git 子模块引入，遵循其自身的 [MIT 许可证](https://github.com/autoclaw-cc/xiaohongshu-skills/blob/9d3055b2f45e166b9514af16020e9fd5163a43a4/LICENSE)。本仓库的 iOS 应用和 Python 适配服务负责与它对接。
 
 如果克隆时没有下载子模块，可以补充运行：
 

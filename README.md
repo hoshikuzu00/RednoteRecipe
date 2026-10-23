@@ -110,7 +110,7 @@ These check how recipe data and API responses are processed, and whether the bun
 
 ## Third-party code
 
-The optional backend uses [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills) for its Chrome extension, browser bridge, and CLI. It is included as a pinned Git submodule and has its own [MIT license](LocalBackend/xiaohongshu-skills/LICENSE). The iOS app and Python adapter in this repository integrate with that project.
+The optional backend uses [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills) for its Chrome extension, browser bridge, and CLI. It is included as a pinned Git submodule and has its own [MIT license](https://github.com/autoclaw-cc/xiaohongshu-skills/blob/9d3055b2f45e166b9514af16020e9fd5163a43a4/LICENSE). The iOS app and Python adapter in this repository integrate with that project.
 
 If you cloned without submodules, download it with:
 
