@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文**
 
+> **安装说明：** 本应用尚未上架 Apple App Store；通过 App Store 发布应用需要加入 [Apple Developer Program](https://developer.apple.com/help/account/membership/programs-overview)。目前请使用 Xcode 编译安装，在 iPhone 真机上运行时需要开启 [Developer Mode（开发者模式）](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)。也可以使用 iPhone 模拟器体验。
+
 把菜谱截图、视频和小红书分享链接，整理成可以编辑、保存、照着做的菜谱。
 
 收藏了一篇菜谱，真正做饭时却还要在正文、图片和视频字幕之间来回找食材和步骤。RednoteRecipe 会把这些内容整理到一份菜谱里。你可以先检查和修改识别结果，再保存到菜谱库；做饭时逐步勾选，买菜前把食材加入购物清单。

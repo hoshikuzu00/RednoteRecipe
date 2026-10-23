@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
+> **Availability:** This app is not published on Apple's App Store. App Store distribution requires an [Apple Developer Program membership](https://developer.apple.com/help/account/membership/programs-overview). To use the app, build and install it with Xcode. Running it on a physical iPhone requires [Developer Mode](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device). You can also try it in the iPhone simulator.
+
 Turn recipe screenshots, videos, and Xiaohongshu (Rednote) links into recipes you can edit and cook from.
 
 A saved recipe post can leave you scrolling between captions, images, and video subtitles to find what you need. RednoteRecipe brings the ingredients and instructions into one editable recipe. Review it before saving, check off steps as you cook, and add ingredients to your shopping list.
