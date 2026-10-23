@@ -81,7 +81,9 @@ API requests, including the connection check, may incur usage charges. Enter the
 
 #### Model selection and request limits
 
-**The checked-in version uses `gpt-5.4-nano` for all AI calls.** The model is hard-coded, and Settings lets you enter an API key but does not offer a model picker. The app does not automatically switch to another model after a failure.
+**The checked-in version uses `gpt-5.4-nano` for all AI calls.** This choice was made to keep costs down, as GPT-5.5 API calls were relatively expensive during development.
+
+The model is hard-coded, and Settings lets you enter an API key but does not offer a model picker. The app does not automatically switch to another model after a failure.
 
 **Testing experience:** GPT-5.5 has also been tested with this project and produced recipe extractions with good accuracy in those tests. This is a qualitative assessment of the test results.
 
@@ -130,6 +132,8 @@ When you use AI extraction, selected images, video frames, and relevant text are
 - The shopping list adds ingredients as separate entries; it does not combine quantities or convert units across recipes.
 - Automatic backend discovery is disabled. Set the URL yourself and update it if your Mac's address changes.
 - The Mac backend has no login protection or HTTPS encryption. Use it only on a trusted local network; do not expose it to the internet.
+
+Opening Xiaohongshu pages and reading the text and media from shared links can also be moved to a server, with the iPhone sending import requests to that server. This requires a browser, the bridge and adapter services, login-session management, authentication, and HTTPS. The repository currently provides scripts for a local Mac setup; a server deployment would need additional setup and adaptation.
 
 ## Code layout
 
