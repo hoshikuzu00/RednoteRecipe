@@ -1,0 +1,31 @@
+DerivedData/
+.DS_Store
+
+LocalBackend/.venv/
+LocalBackend/__pycache__/
+LocalBackend/runtime/
+LocalBackend/xiaohongshu-skills/.venv/
+LocalBackend/xiaohongshu-skills/__pycache__/
+LocalBackend/xiaohongshu-skills/**/__pycache__/
+
+*.log
+
+# Xcode user state and local build output
+xcuserdata/
+*.xcuserstate
+build/
+
+# Local credentials and browser-extension signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mobileprovision
+*.crx
+
+# Python environments and bytecode
+.venv/
+__pycache__/
+*.py[cod]

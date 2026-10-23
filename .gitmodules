@@ -1,0 +1,3 @@
+[submodule "LocalBackend/xiaohongshu-skills"]
+	path = LocalBackend/xiaohongshu-skills
+	url = https://github.com/autoclaw-cc/xiaohongshu-skills.git

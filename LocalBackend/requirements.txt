@@ -1,0 +1,5 @@
+# Adapter dependencies and the pinned browser bridge's runtime dependencies.
+requests>=2.28.0
+websockets>=12.0
+zeroconf>=0.131.0
+ifaddr>=0.2.0

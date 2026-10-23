@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		093AE7AF8F0C4953B34C979B /* LocalBackendSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53315EC95FE6256FEB22F88 /* LocalBackendSettingsStore.swift */; };
+		259C9AAF984439187A5B1F34 /* RednoteOCRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B895CAA1BE976C43ECD8E /* RednoteOCRApp.swift */; };
+		26896B2D1A7687F8DDB4BB08 /* RecipeLinkImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DFA2F8F5CF578250D3ED73 /* RecipeLinkImporter.swift */; };
+		2A8E455FEBF2AF8CB68FCFAA /* LocalSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB751BAF0DF17C6668BE56D /* LocalSecrets.swift */; };
+		3948449CCD529534ED832F5A /* RecipeLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E345836CEBABA738E1BFDB /* RecipeLibraryStore.swift */; };
+		3B792BCF379ECA584513423F /* RecipeBackendImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62463B5A7CEA06F6C07F6E94 /* RecipeBackendImporter.swift */; };
+		4138589065FA8B48AC6CCF6D /* RecipeParserSkillPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C56F7B399374200D54CB /* RecipeParserSkillPrompts.swift */; };
+		462605A18CA0DF087A1212B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE7D5408780073CFD4D7803 /* ContentView.swift */; };
+		474A8933CA9DAEC8C15CCCB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0716356CD85335AA239EBA /* Assets.xcassets */; };
+		67353E300D543F9FC2FE426E /* OCRViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7978C14B508E8D688B0E75F6 /* OCRViewModel.swift */; };
+		764C4FCC0536F491B42D51D6 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8961082D58D3CE9931006 /* AddRecipeView.swift */; };
+		7737E9EF3C85C54A3D7DDC8E /* RecipeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3076DBE69E0A8D414428DE0 /* RecipeParser.swift */; };
+		9F3D4B506E6E47B0FF3DF345 /* ShoppingCartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A9F25BB8FDD45D2B8BDFC9 /* ShoppingCartStore.swift */; };
+		A41745795451FFB6F8D3D80B /* OpenAIRecipeEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C06B91EF6CBC4B1BCB5AB29 /* OpenAIRecipeEnhancer.swift */; };
+		A4A021AB88206D5A92D16C1D /* recipe-post-parser in Resources */ = {isa = PBXBuildFile; fileRef = BA0EBEB87DC116F75CEAB967 /* recipe-post-parser */; };
+		AC9DCC5C746248AF9FC9E1C9 /* CategoryManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8BB924D98411CC8A6C93A3 /* CategoryManagerView.swift */; };
+		C131BED7E835239C9A2802E4 /* OpenAISettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45BDCB3848008156152E1 /* OpenAISettingsView.swift */; };
+		DD65B1AF0938B5B43BAEDC5C /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFE198FF819B561EFA1F9F /* CategoryStore.swift */; };
+		E5A93EB343426945C698E0AF /* OpenAISettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B90E126275F65C4BEDF61 /* OpenAISettingsStore.swift */; };
+		F5043F3E0476038AB08ACF2D /* VideoFrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847FFEB297FA2D744662D748 /* VideoFrameExtractor.swift */; };
+		F533CBA3E8BBB0F7D30A5185 /* RecipeEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F0B6E49CBF0FDEB8428143 /* RecipeEditorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CB751BAF0DF17C6668BE56D /* LocalSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSecrets.swift; sourceTree = "<group>"; };
+		3C06B91EF6CBC4B1BCB5AB29 /* OpenAIRecipeEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIRecipeEnhancer.swift; sourceTree = "<group>"; };
+		4A9DCE9D423641DBD3E0597C /* RednoteOCR.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RednoteOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62463B5A7CEA06F6C07F6E94 /* RecipeBackendImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBackendImporter.swift; sourceTree = "<group>"; };
+		67F0B6E49CBF0FDEB8428143 /* RecipeEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorView.swift; sourceTree = "<group>"; };
+		69A9F25BB8FDD45D2B8BDFC9 /* ShoppingCartStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartStore.swift; sourceTree = "<group>"; };
+		7693C56F7B399374200D54CB /* RecipeParserSkillPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeParserSkillPrompts.swift; sourceTree = "<group>"; };
+		77DFA2F8F5CF578250D3ED73 /* RecipeLinkImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLinkImporter.swift; sourceTree = "<group>"; };
+		7978C14B508E8D688B0E75F6 /* OCRViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRViewModel.swift; sourceTree = "<group>"; };
+		847FFEB297FA2D744662D748 /* VideoFrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFrameExtractor.swift; sourceTree = "<group>"; };
+		8FE7D5408780073CFD4D7803 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		926B90E126275F65C4BEDF61 /* OpenAISettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISettingsStore.swift; sourceTree = "<group>"; };
+		A2BFE198FF819B561EFA1F9F /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
+		A3076DBE69E0A8D414428DE0 /* RecipeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeParser.swift; sourceTree = "<group>"; };
+		A7E345836CEBABA738E1BFDB /* RecipeLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLibraryStore.swift; sourceTree = "<group>"; };
+		BA0EBEB87DC116F75CEAB967 /* recipe-post-parser */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "recipe-post-parser"; path = "skills/recipe-post-parser"; sourceTree = SOURCE_ROOT; };
+		BC8B895CAA1BE976C43ECD8E /* RednoteOCRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RednoteOCRApp.swift; sourceTree = "<group>"; };
+		D7C45BDCB3848008156152E1 /* OpenAISettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAISettingsView.swift; sourceTree = "<group>"; };
+		DB8BB924D98411CC8A6C93A3 /* CategoryManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagerView.swift; sourceTree = "<group>"; };
+		EC0716356CD85335AA239EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEA8961082D58D3CE9931006 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		F53315EC95FE6256FEB22F88 /* LocalBackendSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBackendSettingsStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3F55D7AEBE97375C40CB00E5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8961082D58D3CE9931006 /* AddRecipeView.swift */,
+				DB8BB924D98411CC8A6C93A3 /* CategoryManagerView.swift */,
+				A2BFE198FF819B561EFA1F9F /* CategoryStore.swift */,
+				8FE7D5408780073CFD4D7803 /* ContentView.swift */,
+				F53315EC95FE6256FEB22F88 /* LocalBackendSettingsStore.swift */,
+				1CB751BAF0DF17C6668BE56D /* LocalSecrets.swift */,
+				7978C14B508E8D688B0E75F6 /* OCRViewModel.swift */,
+				3C06B91EF6CBC4B1BCB5AB29 /* OpenAIRecipeEnhancer.swift */,
+				926B90E126275F65C4BEDF61 /* OpenAISettingsStore.swift */,
+				D7C45BDCB3848008156152E1 /* OpenAISettingsView.swift */,
+				62463B5A7CEA06F6C07F6E94 /* RecipeBackendImporter.swift */,
+				67F0B6E49CBF0FDEB8428143 /* RecipeEditorView.swift */,
+				A7E345836CEBABA738E1BFDB /* RecipeLibraryStore.swift */,
+				77DFA2F8F5CF578250D3ED73 /* RecipeLinkImporter.swift */,
+				A3076DBE69E0A8D414428DE0 /* RecipeParser.swift */,
+				7693C56F7B399374200D54CB /* RecipeParserSkillPrompts.swift */,
+				BC8B895CAA1BE976C43ECD8E /* RednoteOCRApp.swift */,
+				69A9F25BB8FDD45D2B8BDFC9 /* ShoppingCartStore.swift */,
+				847FFEB297FA2D744662D748 /* VideoFrameExtractor.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		512F6C2366E9FF12CD3B1CA7 = {
+			isa = PBXGroup;
+			children = (
+				BA0EBEB87DC116F75CEAB967 /* recipe-post-parser */,
+				7CF0BA6235F8316FC39CF825 /* Resources */,
+				3F55D7AEBE97375C40CB00E5 /* Sources */,
+				A4E0925AA192C85A2D2B9291 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7CF0BA6235F8316FC39CF825 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC0716356CD85335AA239EBA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4E0925AA192C85A2D2B9291 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A9DCE9D423641DBD3E0597C /* RednoteOCR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		212C47326CF94679689BAF90 /* RednoteOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84AEC92E602C686904608E98 /* Build configuration list for PBXNativeTarget "RednoteOCR" */;
+			buildPhases = (
+				164C6FB2F96785D772373C97 /* Sources */,
+				97F3B09F589404E85CD430FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RednoteOCR;
+			packageProductDependencies = (
+			);
+			productName = RednoteOCR;
+			productReference = 4A9DCE9D423641DBD3E0597C /* RednoteOCR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		809C7CDA3975AB40932391AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					212C47326CF94679689BAF90 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3933770CC31F1F720E6B0C2D /* Build configuration list for PBXProject "RednoteOCR" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 512F6C2366E9FF12CD3B1CA7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A4E0925AA192C85A2D2B9291 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				212C47326CF94679689BAF90 /* RednoteOCR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97F3B09F589404E85CD430FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				474A8933CA9DAEC8C15CCCB3 /* Assets.xcassets in Resources */,
+				A4A021AB88206D5A92D16C1D /* recipe-post-parser in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		164C6FB2F96785D772373C97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				764C4FCC0536F491B42D51D6 /* AddRecipeView.swift in Sources */,
+				AC9DCC5C746248AF9FC9E1C9 /* CategoryManagerView.swift in Sources */,
+				DD65B1AF0938B5B43BAEDC5C /* CategoryStore.swift in Sources */,
+				462605A18CA0DF087A1212B6 /* ContentView.swift in Sources */,
+				093AE7AF8F0C4953B34C979B /* LocalBackendSettingsStore.swift in Sources */,
+				2A8E455FEBF2AF8CB68FCFAA /* LocalSecrets.swift in Sources */,
+				67353E300D543F9FC2FE426E /* OCRViewModel.swift in Sources */,
+				A41745795451FFB6F8D3D80B /* OpenAIRecipeEnhancer.swift in Sources */,
+				E5A93EB343426945C698E0AF /* OpenAISettingsStore.swift in Sources */,
+				C131BED7E835239C9A2802E4 /* OpenAISettingsView.swift in Sources */,
+				3B792BCF379ECA584513423F /* RecipeBackendImporter.swift in Sources */,
+				F533CBA3E8BBB0F7D30A5185 /* RecipeEditorView.swift in Sources */,
+				3948449CCD529534ED832F5A /* RecipeLibraryStore.swift in Sources */,
+				26896B2D1A7687F8DDB4BB08 /* RecipeLinkImporter.swift in Sources */,
+				7737E9EF3C85C54A3D7DDC8E /* RecipeParser.swift in Sources */,
+				4138589065FA8B48AC6CCF6D /* RecipeParserSkillPrompts.swift in Sources */,
+				259C9AAF984439187A5B1F34 /* RednoteOCRApp.swift in Sources */,
+				9F3D4B506E6E47B0FF3DF345 /* ShoppingCartStore.swift in Sources */,
+				F5043F3E0476038AB08ACF2D /* VideoFrameExtractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		24B28D11B35AF3B5B80D9B90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2F9B9A7F609F6B2785972246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chonggu.RednoteOCR;
+				PRODUCT_NAME = RednoteOCR;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5897F3A73293F479663E6CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B1E87FE48169F583EC505B23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chonggu.RednoteOCR;
+				PRODUCT_NAME = RednoteOCR;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3933770CC31F1F720E6B0C2D /* Build configuration list for PBXProject "RednoteOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5897F3A73293F479663E6CD5 /* Debug */,
+				24B28D11B35AF3B5B80D9B90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84AEC92E602C686904608E98 /* Build configuration list for PBXNativeTarget "RednoteOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9B9A7F609F6B2785972246 /* Debug */,
+				B1E87FE48169F583EC505B23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 809C7CDA3975AB40932391AF /* Project object */;
+}
