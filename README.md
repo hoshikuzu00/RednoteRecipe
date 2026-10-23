@@ -20,9 +20,9 @@ This is a personal iOS project built with SwiftUI. The Xcode project and app tar
 
 ## Run the app
 
-You need a Mac with Xcode and an iPhone or simulator running iOS 17 or later. Finish Xcode's first-launch setup before building.
+You need a Mac with Xcode and an iPhone or simulator running iOS 17 or later. Complete Xcode's first-launch setup and install iOS platform support if prompted. Your Xcode version must support the iOS version on your phone.
 
-Clone the repository and open the project:
+Clone the repository and open the included project:
 
 ```bash
 git clone --recurse-submodules https://github.com/hoshikuzu00/RednoteRecipe.git
@@ -30,21 +30,48 @@ cd RednoteRecipe
 open RednoteOCR.xcodeproj
 ```
 
-In Xcode:
+To try it in a simulator, select the **RednoteOCR** scheme, choose an iPhone simulator in the toolbar, and click **Run**. For your own iPhone, follow the steps below.
 
-1. Select the **RednoteOCR** scheme.
-2. Choose an iPhone simulator.
-3. Click **Run**.
+### Install on your iPhone
 
-For a physical iPhone, select your own development team under **Signing & Capabilities** and use a bundle identifier that your account can sign.
+A personal Apple Account can be used for testing on your own device; you do not need a paid Apple Developer Program membership for this. Xcode calls this a **Personal Team**. Personal Team builds need to be renewed periodically by connecting the phone and running the app from Xcode again. See [Apple's account guide](https://developer.apple.com/help/account/basics/about-your-developer-account).
+
+#### 1. Connect and pair your phone
+
+1. Connect your iPhone to the Mac with a data cable and unlock it.
+2. If the iPhone asks **Trust This Computer?**, tap **Trust** and enter the phone's passcode.
+3. In Xcode, open **Xcode → Open Developer Tool → Device Hub**, or choose **Manage Devices…** from the run-destination menu. In older Xcode versions, use **Window → Devices and Simulators**.
+4. Select your iPhone and follow the pairing instructions. Click **Pair** if it appears. Keep the phone connected while completing the next steps.
+
+#### 2. Enable Developer Mode
+
+1. On the iPhone, open **Settings → Privacy & Security → Developer Mode** and turn it on.
+2. Read the prompt and tap **Restart**.
+3. After restarting, unlock the phone, confirm that you want to enable Developer Mode, and enter the passcode if asked.
+
+If **Developer Mode** is missing, start pairing the phone with Xcode in step 1 first, then check Settings again. Apple only shows the option after pairing has been initiated or the device was previously paired. See [Apple's Developer Mode guide](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device).
+
+#### 3. Sign, build, and install
+
+1. In **Xcode → Settings → Apple Accounts**, sign in to your Apple Account. Older versions may call this tab **Accounts**.
+2. Click the blue **RednoteOCR** project icon in the left sidebar. Under **TARGETS**, select **RednoteOCR**, then open **Signing & Capabilities**.
+3. Enable **Automatically manage signing**, select your **Personal Team** or development team, and change **Bundle Identifier** to a unique value, such as `com.yourname.RednoteRecipe`. Replace `yourname` with your own identifier. If Xcode shows **Set Up Signing**, use that dialog to select the team and bundle ID instead.
+4. In the toolbar, select the **RednoteOCR** scheme and your connected iPhone as the run destination. If Xcode offers **Register Device**, follow that step and wait for device preparation to finish.
+5. Click **Run** or press **⌘R**. Keep the phone unlocked. When the build succeeds, Xcode installs and launches the app on your iPhone.
+
+If signing fails, check the selected team and unique bundle ID. If the phone is unavailable, read its status in Device Hub and check that Xcode supports its iOS version. Apple's [device setup guide](https://developer.apple.com/documentation/xcode/managing-your-simulated-and-physical-devices-in-device-hub) and [build and signing guide](https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices) explain these screens in more detail.
 
 For a first try, import a clear recipe screenshot, review the extracted ingredients and steps, then save it. This does not need an API key or a Mac backend. Text-heavy images and subtitled videos work best with the local parser.
 
-The generated Xcode project is included. If you change `project.yml`, regenerate it with [XcodeGen](https://github.com/yonaskolb/XcodeGen):
+### Regenerate the project (optional)
+
+The Xcode project is already included. You only need [XcodeGen](https://github.com/yonaskolb/XcodeGen) if you change `project.yml` and want to regenerate it:
 
 ```bash
 xcodegen generate
 ```
+
+Regenerating restores the settings in `project.yml`. If you want to keep your own bundle ID and signing team, update that file too or select them again in Xcode afterward.
 
 ### Optional: AI extraction
 
@@ -52,11 +79,27 @@ Enter your own OpenAI API key in the app's settings. The app sends selected imag
 
 API requests, including the connection check, may incur usage charges. Enter the key in the app; do not put a real key in `LocalSecrets.swift` or commit one to Git.
 
-For developers: the configured model is `gpt-5.4-nano`, set in [OpenAIRecipeEnhancer.swift](Sources/OpenAIRecipeEnhancer.swift) and [OpenAISettingsStore.swift](Sources/OpenAISettingsStore.swift). Your API account needs access to that model.
+#### Model selection and request limits
+
+**All AI calls currently use `gpt-5.4-nano`.** The model is hard-coded, and Settings lets you enter an API key but does not offer a model picker. The app does not automatically switch to another model after a failure.
+
+| Request | Model | `max_output_tokens` |
+| --- | --- | --- |
+| Recipe extraction from text, images, or video frames | `gpt-5.4-nano` | 2,000 |
+| Recipe title check | `gpt-5.4-nano` | 220 |
+| Settings connection test | `gpt-5.4-nano` | 20 |
+
+These output caps are values set by this app, not the model's maximum capacity or a total token budget for an import. Input text and images also contribute to usage. The API endpoint is fixed at `https://api.openai.com/v1/responses`; the backend URL setting only configures the Xiaohongshu adapter.
+
+To change the model, edit `model` in [OpenAIRecipeEnhancer.swift](Sources/OpenAIRecipeEnhancer.swift) and `recipeModel` in [OpenAISettingsStore.swift](Sources/OpenAISettingsStore.swift), then rebuild. Update the model names shown in [OCRViewModel.swift](Sources/OCRViewModel.swift) and [OpenAISettingsView.swift](Sources/OpenAISettingsView.swift) as well.
+
+A replacement must work with the existing Responses API requests, including [image inputs](https://developers.openai.com/api/docs/guides/images-vision) and [strict JSON-schema output](https://developers.openai.com/api/docs/guides/structured-outputs). Your API account must have access to it. Check the request parameters and token budgets when changing models; changing the name alone does not verify compatibility. The connection test sends only a short text request, so passing it does not test image extraction or structured output.
 
 ### Optional: Xiaohongshu link imports
 
-Some posts need an authenticated browser session to load. For these, the app can use a small backend running on your Mac:
+Some posts need an authenticated browser session to load. For these, the app can use a small backend running on your Mac.
+
+This integration uses [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills), which provides the Chrome extension, WebSocket bridge, and CLI. Our Python adapter calls that CLI to retrieve posts; this setup does not require a separate MCP server.
 
 ```text
 iPhone → Python adapter → browser bridge → Chrome logged in to Xiaohongshu

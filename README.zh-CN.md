@@ -20,9 +20,9 @@
 
 ## 运行应用
 
-需要一台安装了 Xcode 的 Mac，以及运行 iOS 17 或更高版本的 iPhone 或模拟器。首次使用 Xcode 时，请先完成它要求的初始化设置。
+需要一台安装了 Xcode 的 Mac，以及运行 iOS 17 或更高版本的 iPhone 或模拟器。请先完成 Xcode 的首次启动设置，按提示安装 iOS 平台支持。Xcode 的版本需要支持手机当前的 iOS 版本。
 
-克隆仓库并打开工程：
+克隆仓库并打开已包含的工程：
 
 ```bash
 git clone --recurse-submodules https://github.com/hoshikuzu00/RednoteRecipe.git
@@ -30,21 +30,48 @@ cd RednoteRecipe
 open RednoteOCR.xcodeproj
 ```
 
-在 Xcode 中：
+如果只想先用模拟器体验，在工具栏选择 **RednoteOCR** 运行方案和一个 iPhone 模拟器，点击 **Run** 即可。安装到自己的 iPhone，请按下面的步骤操作。
 
-1. 选择 **RednoteOCR** 运行方案（scheme）。
-2. 选择一个 iPhone 模拟器。
-3. 点击 **Run** 运行。
+### 安装到自己的 iPhone
 
-如果要在真机上运行，需要在 **Signing & Capabilities** 中选择自己的开发团队，并使用该账号可以签名的 Bundle Identifier。
+在自己的设备上测试，可以使用个人 Apple 账号，不需要付费加入 Apple Developer Program。Xcode 会将这类账号显示为 **Personal Team**。个人团队安装的应用需要定期重新签名；到期后，连接手机并通过 Xcode 再次运行即可续用。详见 [Apple 账号说明](https://developer.apple.com/help/account/basics/about-your-developer-account)。
+
+#### 1. 连接并配对手机
+
+1. 用支持数据传输的线缆连接 iPhone 和 Mac，并解锁手机。
+2. 如果手机提示“**要信任此电脑吗？**”，点击“**信任**”，并输入手机锁屏密码。
+3. 在 Xcode 中打开 **Xcode → Open Developer Tool → Device Hub**，也可以从工具栏的运行设备菜单选择 **Manage Devices…**。较旧版本的入口是 **Window → Devices and Simulators**。
+4. 选择自己的 iPhone，按界面提示配对；如果出现 **Pair** 按钮，点击它。接下来的设置过程中保持手机连接。
+
+#### 2. 开启 Developer Mode（开发者模式）
+
+1. 在 iPhone 上打开“**设置 → 隐私与安全性 → 开发者模式**”，开启开关。
+2. 阅读系统提示，点击“**重新启动**”。
+3. 重启后解锁手机，在确认提示中开启开发者模式，并按要求输入锁屏密码。
+
+如果找不到“**开发者模式**”，先完成上一步中开始与 Xcode 配对的操作，再回到设置查看。Apple 只会在开始配对或设备曾经配对后显示这个选项。详见 [Apple 开发者模式指南](https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device)。
+
+#### 3. 配置签名并安装
+
+1. 打开 **Xcode → Settings → Apple Accounts**，登录自己的 Apple 账号。较旧版本的标签可能叫 **Accounts**。
+2. 点击左侧栏蓝色的 **RednoteOCR** 工程图标，在 **TARGETS** 下选择 **RednoteOCR**，打开 **Signing & Capabilities**。
+3. 勾选 **Automatically manage signing**，在 **Team** 中选择自己的 **Personal Team** 或开发团队。将 **Bundle Identifier** 改为唯一的标识，例如 `com.yourname.RednoteRecipe`，其中 `yourname` 替换为自己的标识。如果出现 **Set Up Signing**，就在该对话框中选择团队并填写 Bundle ID。
+4. 在工具栏选择 **RednoteOCR** 运行方案，并将已连接的 iPhone 设为运行设备。如果 Xcode 显示 **Register Device**，按提示注册，等待设备准备完成。
+5. 点击 **Run** 或按 **⌘R**，保持手机解锁。编译成功后，Xcode 会把应用安装到 iPhone 上并启动。
+
+如果签名失败，先检查团队是否选对、Bundle ID 是否唯一。如果设备不可用，查看 Device Hub 中的具体提示，并确认 Xcode 支持手机的 iOS 版本。Apple 的[设备配对指南](https://developer.apple.com/documentation/xcode/managing-your-simulated-and-physical-devices-in-device-hub)和[运行与签名指南](https://developer.apple.com/documentation/xcode/running-your-app-on-simulated-or-physical-devices)提供了更详细的界面说明。
 
 第一次体验时，可以先导入一张文字清晰的菜谱截图，检查食材和步骤，再保存。这一步不需要 API 密钥，也不需要配置 Mac 后端。本地解析更适合文字清楚的图片和带字幕的视频。
 
-仓库已包含生成好的 Xcode 工程。如果修改了 `project.yml`，可用 [XcodeGen](https://github.com/yonaskolb/XcodeGen) 重新生成：
+### 重新生成工程（可选）
+
+仓库已包含 Xcode 工程。只有修改了 `project.yml`、需要重新生成工程时，才需要使用 [XcodeGen](https://github.com/yonaskolb/XcodeGen)：
 
 ```bash
 xcodegen generate
 ```
+
+重新生成会恢复 `project.yml` 中的设置。要保留自己的 Bundle ID 和签名团队，请同步修改该文件，或在生成后回到 Xcode 重新选择。
 
 ### 可选：使用 AI 整理菜谱
 
@@ -52,11 +79,27 @@ xcodegen generate
 
 API 请求可能产生费用，设置里的连接测试也会发出请求。请在应用中填写密钥，不要把真实密钥写进 `LocalSecrets.swift` 或提交到 Git。
 
-如果需要调整模型，当前源码在 [OpenAIRecipeEnhancer.swift](Sources/OpenAIRecipeEnhancer.swift) 和 [OpenAISettingsStore.swift](Sources/OpenAISettingsStore.swift) 中配置的是 `gpt-5.4-nano`。你的 API 账号需要有权使用该模型。
+#### 模型选择与请求限制
+
+**目前所有 AI 请求都固定使用 `gpt-5.4-nano`。** 模型名称写在源码中，设置界面只能填写 API 密钥，不能选择模型。请求失败后，应用也不会自动切换到另一个模型。
+
+| 请求 | 模型 | `max_output_tokens` |
+| --- | --- | --- |
+| 从文字、图片或视频帧提取菜谱 | `gpt-5.4-nano` | 2,000 |
+| 检查菜名 | `gpt-5.4-nano` | 220 |
+| 设置中的连接测试 | `gpt-5.4-nano` | 20 |
+
+这些输出上限由应用设置，不代表模型本身的最大能力，也不是一次导入的总 token 预算；输入文字和图片同样会产生用量。API 地址固定为 `https://api.openai.com/v1/responses`，设置里的后端地址只用于配置小红书适配服务。
+
+如果要更换模型，需要修改 [OpenAIRecipeEnhancer.swift](Sources/OpenAIRecipeEnhancer.swift) 中的 `model` 和 [OpenAISettingsStore.swift](Sources/OpenAISettingsStore.swift) 中的 `recipeModel`，然后重新编译。同时更新 [OCRViewModel.swift](Sources/OCRViewModel.swift) 和 [OpenAISettingsView.swift](Sources/OpenAISettingsView.swift) 中显示的模型名称。
+
+新模型需要兼容现有的 Responses API 请求，包括[图片输入](https://developers.openai.com/api/docs/guides/images-vision)和[严格 JSON Schema 输出](https://developers.openai.com/api/docs/guides/structured-outputs)，你的 API 账号也需要有权使用它。换模型时应检查请求参数和 token 预算；只改名称不代表已经验证兼容。设置中的连接测试只发送一条简短文字请求，通过测试并不代表图片提取和结构化输出也已经验证。
 
 ### 可选：通过 Mac 导入小红书链接
 
-有些帖子需要登录后才能读取。遇到这类内容，应用可以借助运行在 Mac 上的后端，通过已登录小红书的 Chrome 获取帖子：
+有些帖子需要登录后才能读取。遇到这类内容，应用可以借助运行在 Mac 上的后端，通过已登录小红书的 Chrome 获取帖子。
+
+这里接入的是 [autoclaw-cc/xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills)，它提供 Chrome 扩展、WebSocket 桥接服务和命令行工具。本项目的 Python 适配服务通过命令行工具读取帖子，这套安装流程不需要另行配置 MCP 服务。
 
 ```text
 iPhone → Python 适配服务 → 浏览器桥接服务 → 已登录小红书的 Chrome
